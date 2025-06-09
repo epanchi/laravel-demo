@@ -6,3 +6,4 @@ composer require filament/filament:"^3.3" -W
 
 php artisan filament:install --panels
 ```
+#prueba
