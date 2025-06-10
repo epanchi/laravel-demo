@@ -38,10 +38,11 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'frontend_user',
+            // The session driver stores the user's state in the session change to ""
+            'provider' => 'users',
         ],
 
-        'frontend_user' => [
+        'admin' => [
             'driver' => 'session',
             'provider' => 'frontend_user',
         ],

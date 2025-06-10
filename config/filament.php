@@ -15,7 +15,7 @@ return [
     */
 
     'auth' => [
-        'guard' => 'frontend_user',
+        'guard' => 'admin',
     ],
 
     'broadcasting' => [
