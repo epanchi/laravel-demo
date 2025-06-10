@@ -6,4 +6,13 @@ composer require filament/filament:"^3.3" -W
 
 php artisan filament:install --panels
 ```
-#prueba
+
+# Database 
+```
+php artisan make:migration
+```
+
+- Copy user information to frontend_user table
+```
+INSERT INTO frontend_user SELECT * FROM users;
+```
