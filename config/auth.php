@@ -38,8 +38,14 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'frontend_user',
         ],
+
+        'frontend_user' => [
+            'driver' => 'session',
+            'provider' => 'frontend_user',
+        ],
+
     ],
 
     /*
@@ -63,6 +69,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'frontend_user' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\FrontendUser::class,
         ],
 
         // 'users' => [
