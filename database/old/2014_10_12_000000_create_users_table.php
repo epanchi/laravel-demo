@@ -15,9 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            // Si no existen, agrégalos
+            if (!Schema::hasColumn('remember_token')) {
+                $table->timestamps(); // Agrega created_at y updated_at
+            }
+
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+
             $table->timestamps();
         });
     }
