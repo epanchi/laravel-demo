@@ -74,7 +74,7 @@ return [
 
         'frontend_user' => [
             'driver' => 'eloquent',
-            'model' => App\Models\FrontendUser::class,
+            'model' => App\Models\AdminUser::class,
         ],
 
         // 'users' => [
