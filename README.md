@@ -1,12 +1,23 @@
-# Installing filamente
+# Installing filament
 Documentation: https://filamentphp.com/docs/3.x/panels/installation
 
 ```
 composer require filament/filament:"^3.3" -W
-
 php artisan filament:install --panels
-
 php artisan vendor:publish --tag=filament-config
+```
+# Create Modeles to integrate behavior
+https://filamentphp.com/docs/3.x/panels/getting-started
+## Create models
+
+```
+php artisan make:model Reservation
+```
+
+
+## Cración de recursos
+```
+php artisan make:filament-resource Reservation
 ```
 
 # Database 
@@ -21,8 +32,6 @@ INSERT INTO frontend_user SELECT * FROM users;
 
 After delete migration table
 ```
-
-
 
 CREATE TABLE `migrations` (
   `version` bigint NOT NULL AUTO_INCREMENT,
